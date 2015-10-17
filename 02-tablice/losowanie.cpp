@@ -21,12 +21,12 @@ int main() {
     int tab[SIZE];
     srand(time(NULL));
 
-    dousuma{0};
+    double suma{0};
     double iloczyn{1};
     float mediana{0};
 
     for (int i = 0; i < SIZE; i++) {
-        tab[i] = rand();
+        tab[i] = rand() % 100; // ograniczenie do 100
 
         suma += tab[i];
         iloczyn *= tab[i];
