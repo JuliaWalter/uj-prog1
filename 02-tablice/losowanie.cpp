@@ -6,6 +6,7 @@ Napisz program, który kolejno:
 - wypisze na ekran średnią arytmetyczną, geometryczną oraz
 medianę elementów tablicy
 */
+
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
