@@ -12,6 +12,7 @@ Ostatni element jest wstawiany na pozycję 0)
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <utility>
 
 #define SIZE 10
 
@@ -23,14 +24,42 @@ int main() {
 	int tab[SIZE];
 	srand(time(NULL));
 
+    cout << "Tablica: ";
 	for (int i = 0; i < SIZE; i++) {
 		tab[i] = rand() % 100;
-
 		cout << tab[i] << " ";
 	}
+    cout << endl;
 
-    for (int i = 0; i < SIZE; i++) {
-        
+    for (int i = 0; i < SIZE / 2; i++) {
+        //int t = tab[SIZE - i - 1];
+        //tab[SIZE - i - 1] = tab[i];
+        //tab[i] = t;
+        std::swap(tab[SIZE - i - 1], tab[i]);
     }
+
+    cout << "Tablica odwrócona: ";
+    for (int i = 0; i < SIZE; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+
+    int t{0};
+    for (int i = 0; i < SIZE; i++) {
+        if (i + 1 == SIZE) {
+            tab[0] = tab[SIZE - 1];
+            tab[SIZE - 1] = t;
+        } else {
+            int r = tab[i];
+            tab[i] = t;
+            t = r;
+        }
+    }
+
+    cout << "Tablica przesunięta w prawo: ";
+    for (int i = 0; i < SIZE; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
 
 }
