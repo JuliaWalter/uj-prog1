@@ -61,5 +61,48 @@ int main() {
         cout << tab[i] << " ";
     }
     cout << endl;
+    
+    /* 
+    procedure bubbleSort( A : lista elementów do posortowania )
+	n = liczba_elementów(A)
+	do
+		for (i = 0; i < n-1; i++) do:
+			if A[i] > A[i+1] then
+				swap(A[i], A[i+1])
+			end if
+		end for
+		n = n-1
+	while n > 1
+	end procedure
+	*/
+    int n = SIZE;
+    do {
+		for (int i = 0; i < n-1; i++) {
+			if (tab[i] > tab[i+1]) {
+				//std::swap(tab[i], tab[i+1]);
+				int c = tab[i];
+				tab[i] = tab[i+1];
+				tab[i+1] = c;
+			}
+		}
+		n--;
+	} while (n > 1);
+
+	cout << "Tablica posortowana: ";
+	for (int i = 0; i < SIZE; i++) {
+        cout << tab[i] << " ";
+    }
+    cout << endl;
+    	
 
 }
+
+
+
+
+
+
+
+
+
+
