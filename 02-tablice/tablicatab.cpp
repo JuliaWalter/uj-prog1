@@ -23,23 +23,22 @@ int main() {
     }
     
     /*
-	for n = 0 to N - 2
+    for n = 0 to N - 2
 		for m = n + 1 to N - 1
 			swap A(n,m) with A(m,n)
 	*/
 	
 	for (int i = 0; i <= SIZE-2; i++) {
-		for (int j = i+1; j <= SIZE-1; j++) {
-			std::swap(tab[i][j], tab[j][i]);	
-		}	
-	}
-	cout << endl;
-	 for (int i = 0; i < SIZE; i++) {
+	    for (int j = i+1; j <= SIZE-1; j++) {
+	    	std::swap(tab[i][j], tab[j][i]);	
+    	}	
+    }
+    
+    cout << endl;
+    for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
             cout << tab[i][j] << "\t";
         }
         cout << endl;
     }
-
-
 }
