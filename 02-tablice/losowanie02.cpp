@@ -19,16 +19,17 @@ Ostatni element jest wstawiany na pozycję 0)
 using std::cout;
 using std::endl;
 
-int main() {
+int main()
+{
 
-	int tab[SIZE];
-	srand(time(NULL));
+    int tab[SIZE];
+    srand(time(NULL));
 
     cout << "Tablica: ";
-	for (int i = 0; i < SIZE; i++) {
-		tab[i] = rand() % 100;
-		cout << tab[i] << " ";
-	}
+    for (int i = 0; i < SIZE; i++) {
+        tab[i] = rand() % 100;
+        cout << tab[i] << " ";
+    }
     cout << endl;
 
     for (int i = 0; i < SIZE / 2; i++) {
@@ -44,7 +45,7 @@ int main() {
     }
     cout << endl;
 
-    int t{0};
+    int t {0};
     for (int i = 0; i < SIZE; i++) {
         if (i + 1 == SIZE) {
             tab[0] = tab[SIZE - 1];
@@ -61,39 +62,39 @@ int main() {
         cout << tab[i] << " ";
     }
     cout << endl;
-    
-    /* 
+
+    /*
     procedure bubbleSort( A : lista elementów do posortowania )
-	n = liczba_elementów(A)
-	do
-		for (i = 0; i < n-1; i++) do:
-			if A[i] > A[i+1] then
-				swap(A[i], A[i+1])
-			end if
-		end for
-		n = n-1
-	while n > 1
-	end procedure
-	*/
+    n = liczba_elementów(A)
+    do
+    	for (i = 0; i < n-1; i++) do:
+    		if A[i] > A[i+1] then
+    			swap(A[i], A[i+1])
+    		end if
+    	end for
+    	n = n-1
+    while n > 1
+    end procedure
+    */
     int n = SIZE;
     do {
-		for (int i = 0; i < n-1; i++) {
-			if (tab[i] > tab[i+1]) {
-				//std::swap(tab[i], tab[i+1]);
-				int c = tab[i];
-				tab[i] = tab[i+1];
-				tab[i+1] = c;
-			}
-		}
-		n--;
-	} while (n > 1);
+        for (int i = 0; i < n-1; i++) {
+            if (tab[i] > tab[i+1]) {
+                //std::swap(tab[i], tab[i+1]);
+                int c = tab[i];
+                tab[i] = tab[i+1];
+                tab[i+1] = c;
+            }
+        }
+        n--;
+    } while (n > 1);
 
-	cout << "Tablica posortowana: ";
-	for (int i = 0; i < SIZE; i++) {
+    cout << "Tablica posortowana: ";
+    for (int i = 0; i < SIZE; i++) {
         cout << tab[i] << " ";
     }
     cout << endl;
-    	
+
 
 }
 
